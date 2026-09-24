@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Devyanshu Kaushik — Senior DevOps Engineer</title>
+  <meta name="description" content="Senior DevOps Engineer building production Kubernetes infrastructure, CI/CD pipelines and observability on GCP and AWS. Systems handling 100K+ requests per minute.">
+  <meta name="theme-color" content="#05070A">
+  <meta property="og:title" content="Devyanshu Kaushik — Senior DevOps Engineer">
+  <meta property="og:description" content="Cloud infrastructure, Kubernetes, CI/CD and Python. Production systems handling 100K+ requests/minute.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/vendor/inter/index.css">
+  <link rel="stylesheet" href="/vendor/jetbrains-mono/index.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="module" src="/js/main.js"></script>
+  <noscript><style>#loader{display:none!important}body{overflow:auto!important}</style></noscript>
+</head>
+<body class="is-loading">
+
+  <!-- ─────────────── Loader ─────────────── -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-box">
+      <p class="loader-title mono">INITIALIZING DEVYANSHU.KAUSHIK...</p>
+      <div class="loader-bar"><i id="loaderFill"></i></div>
+      <p class="loader-pct mono"><span id="loaderPct">0</span>%</p>
+      <ul class="loader-log mono" id="loaderLog"></ul>
+      <p class="loader-ready mono" id="loaderReady">SYSTEM READY</p>
+    </div>
+  </div>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- ─────────────── Navigation / system status bar ─────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand mono" href="#top" aria-label="Devyanshu Kaushik — back to top">[ DEVYANSHU.KAUSHIK ]</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about" data-spy="about"><i class="mono">01</i>About</a>
+        <a href="#infrastructure" data-spy="infrastructure"><i class="mono">02</i>Infrastructure</a>
+        <a href="#experience" data-spy="experience"><i class="mono">03</i>Experience</a>
+        <a href="#projects" data-spy="projects"><i class="mono">04</i>Projects</a>
+        <a href="#stack" data-spy="stack"><i class="mono">05</i>Stack</a>
+        <a href="#contact" data-spy="contact"><i class="mono">06</i>Contact</a>
+      </nav>
+
+      <div class="nav-status">
+        <span class="sys mono"><i class="dot"></i>SYSTEM: ONLINE</span>
+        <button class="nav-term mono" id="openTerm" type="button" aria-label="Open terminal (press the backtick key)" title="Open terminal  ( ` )">&gt;_</button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════ 02 HERO ═══════════════ -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-name"><i class="dot"></i>Devyanshu Kaushik</p>
+          <h1 class="hero-title">Senior DevOps<br>Engineer</h1>
+          <p class="hero-stack mono">Cloud Infrastructure · Kubernetes · CI/CD · Python</p>
+          <p class="hero-desc">I design, automate and operate scalable cloud infrastructure, production Kubernetes environments and reliable deployment systems.</p>
+
+          <div class="hero-stat">
+            <span class="hero-stat-num mono" data-count="100" data-suffix="K+">100K+</span>
+            <p class="hero-stat-copy">Engineering production systems handling <b>100K+ requests/minute</b>.</p>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Establish connection</a>
+            <a class="btn" href="#infrastructure">Explore the infrastructure</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="map-panel panel" id="heroMapPanel">
+            <div class="map-hud map-hud-top">
+              <span class="status mono"><i class="dot"></i>ALL SYSTEMS OPERATIONAL</span>
+              <span class="mono tiny muted" id="heroTicker">deploy/api · idle</span>
+            </div>
+            <svg id="heroMap" class="map-svg" role="img" aria-label="Animated diagram: internet traffic flows through a load balancer to three Kubernetes nodes, then microservices, then PostgreSQL, MongoDB and Redis."></svg>
+            <div class="map-hud map-hud-bottom mono">
+              <span><em>REQ/MIN</em><b id="hudReq">100,412</b></span>
+              <span><em>CPU</em><b id="hudCpu">42%</b></span>
+              <span><em>PODS</em><b id="hudPods">9</b></span>
+              <span class="hud-sim">simulated</span>
+            </div>
+          </div>
+
+          <div class="term panel" data-term="hero" aria-label="Interactive terminal"></div>
+        </div>
+      </div>
+      <a class="scroll-cue mono" href="#metrics" aria-label="Scroll to metrics"><i></i>scroll</a>
+    </section>
+
+    <!-- ═══════════════ 03 IMPACT METRICS ═══════════════ -->
+    <section class="sec" id="metrics" aria-labelledby="metricsTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="metricsTitle" data-type>Production, in numbers</h2>
+        </header>
+
+        <div class="metrics">
+          <article class="metric metric-hero panel" data-metric>
+            <div class="metric-num mono" data-count="100" data-suffix="K+">0</div>
+            <p class="metric-label mono">REQUESTS / MINUTE</p>
+            <p class="metric-note">Production Kubernetes with load balancing, run independently at Nitro Commerce.</p>
+            <canvas class="metric-spark" data-spark aria-hidden="true"></canvas>
+          </article>
+          <article class="metric panel" data-metric>
+            <div class="metric-num mono" data-count="20" data-suffix="+">0</div>
+            <p class="metric-label mono">PRODUCTION SERVERS</p>
+            <p class="metric-note">Linux, across GCP and AWS.</p>
+          </article>
+          <article class="metric panel" data-metric>
+            <div class="metric-num mono" data-count="4" data-suffix="+">0</div>
+            <p class="metric-label mono">YEARS EXP.</p>
+            <p class="metric-note">Backend, DevOps and AI.</p>
+          </article>
+          <article class="metric panel" data-metric>
+            <div class="metric-num mono" data-count="3" data-suffix="">0</div>
+            <p class="metric-label mono">CLOUD / INFRA ENVIRONMENTS</p>
+            <p class="metric-note">GCP, AWS and onsite.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 04 ABOUT / SYSTEM PROFILE ═══════════════ -->
+    <section class="sec" id="about" aria-labelledby="aboutTitle">
+      <div class="wrap about-grid">
+        <div>
+          <header class="sec-head">
+            <h2 id="aboutTitle" data-type>Engineer behind the infrastructure</h2>
+          </header>
+          <p class="lead">DevOps Engineer with 4+ years of experience designing, deploying and managing cloud-native infrastructure, Kubernetes environments, CI/CD pipelines, monitoring systems and distributed databases.</p>
+          <p class="body-copy">Most of that time has gone into keeping production boring: systems that stay up under 100,000+ requests a minute, deployments nobody has to watch, and logs and dashboards that answer questions before anyone asks. Python is the glue, and lately the agentic AI systems at RaySuite AI have become the newest thing to keep running.</p>
+        </div>
+
+        <div class="profile panel" data-tilt>
+          <div class="profile-head mono"><span>SYSTEM PROFILE</span><span class="muted">v2026</span></div>
+          <dl class="profile-list mono">
+            <div><dt>NAME</dt><dd>Devyanshu Kaushik</dd></div>
+            <div><dt>ROLE</dt><dd class="ok">Senior DevOps Engineer</dd></div>
+            <div><dt>EXPERIENCE</dt><dd>4+ Years</dd></div>
+            <div><dt>LOCATION</dt><dd>Gurugram, India</dd></div>
+            <div><dt>FOCUS</dt><dd>Cloud / Kubernetes / Automation</dd></div>
+            <div><dt>CURRENT</dt><dd>RaySuite AI <span class="muted">(Jun 2025 –)</span></dd></div>
+            <div><dt>EDUCATION</dt><dd>B.Tech CSE, K.R. Mangalam University <span class="muted">(2022)</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 05 INFRASTRUCTURE ═══════════════ -->
+    <section class="sec" id="infrastructure" aria-labelledby="infraTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="infraTitle" data-type>Infrastructure I build</h2>
+          <p class="sec-sub">Click any component to see what sits behind it.</p>
+        </header>
+
+        <div class="explorer">
+          <div class="panel explorer-map">
+            <svg id="infraMap" class="map-svg" role="img" aria-label="Interactive infrastructure diagram. Select a component to read about it."></svg>
+          </div>
+          <aside class="panel explorer-detail" id="infraDetail" aria-live="polite">
+            <p class="detail-tag mono">SELECTED</p>
+            <h3 class="detail-title mono" id="infraDetailTitle">KUBERNETES</h3>
+            <ul class="detail-list" id="infraDetailList"></ul>
+          </aside>
+        </div>
+
+        <!-- Cloud topology -->
+        <div class="sub-block">
+          <h3 class="sub-title">Cloud topology</h3>
+          <div class="panel topo">
+            <svg id="cloudMap" class="map-svg" role="img" aria-label="GCP, AWS and onsite environments all feeding one production infrastructure."></svg>
+          </div>
+        </div>
+
+        <!-- Kubernetes // production -->
+        <div class="sub-block" id="k8s">
+          <div class="k8s-head">
+            <h3 class="sub-title mono">KUBERNETES // PRODUCTION</h3>
+            <div class="k8s-actions">
+              <button class="chip-btn mono" id="k8sRollout" type="button">▶ rolling update</button>
+              <button class="chip-btn mono" id="k8sKill" type="button">✕ kill a pod</button>
+            </div>
+          </div>
+
+          <div class="k8s panel" id="k8sBoard">
+            <div class="k8s-tree" id="k8sTree">
+              <div class="k8s-root mono"><i></i>Cluster</div>
+              <div class="k8s-nodes" id="k8sNodes"></div>
+            </div>
+            <div class="k8s-stats mono" id="k8sStats">
+              <div><em>CPU</em><b id="kCpu">42%</b><i class="bar"><s id="kCpuBar"></s></i></div>
+              <div><em>MEMORY</em><b id="kMem">61%</b><i class="bar"><s id="kMemBar"></s></i></div>
+              <div><em>PODS</em><b id="kPods">42</b></div>
+              <div><em>NODES</em><b>3</b></div>
+              <div><em>STATUS</em><b class="ok" id="kStatus">HEALTHY</b></div>
+              <p class="tiny muted">simulated portfolio values, not live telemetry</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data layer -->
+        <div class="sub-block">
+          <h3 class="sub-title">Data layer</h3>
+          <div class="dbs">
+            <div class="db panel" data-tilt><span class="db-dot"></span><b class="mono">PostgreSQL</b><p>Relational workloads</p></div>
+            <div class="db panel" data-tilt><span class="db-dot"></span><b class="mono">MongoDB</b><p>Document store for platform services</p></div>
+            <div class="db panel" data-tilt><span class="db-dot"></span><b class="mono">Cassandra</b><p>Distributed, high-write data</p></div>
+            <div class="db panel" data-tilt><span class="db-dot"></span><b class="mono">Redis</b><p>Caching layer</p></div>
+            <div class="db panel" data-tilt><span class="db-dot"></span><b class="mono">MariaDB</b><p>Relational workloads</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 06 CI/CD ═══════════════ -->
+    <section class="sec" id="cicd" aria-labelledby="cicdTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="cicdTitle" data-type>Deployment pipeline</h2>
+          <p class="sec-sub">GitHub Actions pipelines that reduced deployment time and made production releases zero-touch.</p>
+        </header>
+
+        <div class="pipe panel" id="pipe">
+          <div class="pipe-track" id="pipeTrack">
+            <div class="pipe-line"><i id="pipeFill"></i></div>
+            <span class="pipe-packet" id="pipePacket"></span>
+            <ol class="pipe-stages" id="pipeStages">
+              <li data-stage="code"><b class="mono">CODE</b><span>commit</span></li>
+              <li data-stage="github"><b class="mono">GitHub</b><span>push · PR</span></li>
+              <li data-stage="actions"><b class="mono">GitHub Actions</b><span>workflow</span></li>
+              <li data-stage="build"><b class="mono">Build</b><span>compile</span></li>
+              <li data-stage="docker"><b class="mono">Docker</b><span>image</span></li>
+              <li data-stage="test"><b class="mono">Test</b><span>checks</span></li>
+              <li data-stage="deploy"><b class="mono">Deploy</b><span>release</span></li>
+              <li data-stage="k8s"><b class="mono">Kubernetes</b><span>rollout</span></li>
+              <li data-stage="prod"><b class="mono">Production</b><span>live</span></li>
+            </ol>
+          </div>
+
+          <div class="pipe-foot">
+            <div class="pipe-log mono" id="pipeLog" aria-live="off"></div>
+            <div class="pipe-result" id="pipeResult">
+              <p class="pipe-result-title mono" id="pipeResultTitle">PIPELINE IDLE</p>
+              <p class="pipe-result-sub" id="pipeResultSub">Scroll here to trigger a release.</p>
+              <button class="chip-btn mono" id="pipeRun" type="button">↻ run again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 07 OBSERVABILITY ═══════════════ -->
+    <section class="sec" id="observability" aria-labelledby="obsTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="obsTitle" data-type>Observability</h2>
+          <p class="sec-sub">Centralised monitoring and logging with Grafana and Loki, with log retention on Google Cloud Storage. Panels below are simulated for illustration.</p>
+        </header>
+
+        <div class="obs">
+          <div class="panel obs-bars mono" id="obsBars">
+            <div class="obs-row"><em>REQUESTS</em><i class="bar"><s data-w="92"></s></i><b>100K+/min</b></div>
+            <div class="obs-row"><em>LATENCY</em><i class="bar"><s data-w="58"></s></i><b>stable</b></div>
+            <div class="obs-row"><em>ERROR RATE</em><i class="bar"><s data-w="8"></s></i><b>low</b></div>
+            <div class="obs-row"><em>SERVICES</em><i class="bar"><s data-w="100"></s></i><b>healthy</b></div>
+          </div>
+
+          <div class="panel obs-graph">
+            <div class="panel-title mono"><span>request rate</span><span class="muted">grafana-style panel · simulated</span></div>
+            <canvas id="obsChart" aria-label="Simulated request rate time series"></canvas>
+          </div>
+
+          <div class="panel obs-logs">
+            <div class="panel-title mono"><span>log stream</span><span class="muted">loki-style panel · simulated</span></div>
+            <div class="logs mono" id="obsLogs" aria-hidden="true"></div>
+          </div>
+
+          <ul class="obs-chips mono">
+            <li>Grafana</li><li>Loki</li><li>Centralized Logging</li><li>Monitoring</li><li>Log Retention</li><li>GCS Storage</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 08 TECHNOLOGY CONSTELLATION ═══════════════ -->
+    <section class="sec" id="stack" aria-labelledby="stackTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="stackTitle" data-type>Technology constellation</h2>
+          <p class="sec-sub"><span class="only-desktop">Hover a technology to pull it forward.</span><span class="only-mobile">Swipe through the stack.</span></p>
+        </header>
+
+        <div class="orbit-wrap">
+          <div class="orbit" id="orbit" aria-hidden="false"></div>
+          <div class="orbit-info panel" id="orbitInfo" aria-live="polite">
+            <p class="detail-tag mono" id="orbitCat">DEVOPS</p>
+            <h3 class="detail-title mono" id="orbitName">Kubernetes</h3>
+            <p id="orbitBlurb">Production clusters serving 100K+ requests/minute.</p>
+          </div>
+          <div class="orbit-scroll" id="orbitScroll"></div>
+        </div>
+
+        <ul class="legend mono">
+          <li><i style="background:#00FF9C"></i>Platform &amp; ops</li>
+          <li><i style="background:#00D9FF"></i>Cloud &amp; data</li>
+          <li><i style="background:#7C3AED"></i>Languages &amp; frameworks</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 09 EXPERIENCE TIMELINE ═══════════════ -->
+    <section class="sec" id="experience" aria-labelledby="expTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="expTitle" data-type>Production timeline</h2>
+        </header>
+
+        <div class="timeline" id="timeline">
+          <div class="tl-rail"><i id="tlFill"></i></div>
+
+          <article class="tl-item" data-tl>
+            <div class="tl-year mono">2025</div>
+            <div class="tl-node"></div>
+            <div class="tl-body panel">
+              <div class="tl-top">
+                <div><h3>RaySuite AI</h3><p class="tl-role">Senior Software Engineer</p></div>
+                <span class="badge mono live"><i class="dot"></i>CURRENT</span>
+              </div>
+              <p class="tl-meta mono">Jun 2025 – Present · Delhi, India (Hybrid)</p>
+              <ul class="tree mono">
+                <li>Agentic AI</li><li>Campaign Automation</li><li>Predictive Analytics</li><li>Microservices</li><li>Distributed Databases</li>
+              </ul>
+              <details>
+                <summary class="mono">deployment log</summary>
+                <ul class="log-list">
+                  <li>Developed an agentic AI system, <b>Adi</b>, using LangGraph architecture for intelligent workflow automation.</li>
+                  <li>Built scalable microservices for managing Meta and Google ad campaigns.</li>
+                  <li>Created AI-powered chatbot systems for automated social media engagement and quick replies.</li>
+                  <li>Designed predictive algorithms to forecast ROAS and revenue for brands.</li>
+                  <li>Implemented automation that optimises campaign budgets dynamically based on performance.</li>
+                  <li>Automated generation of static and video ad copies within campaigns.</li>
+                  <li>Managed backend infrastructure and databases, including MongoDB, Cassandra and PostgreSQL.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+
+          <article class="tl-item" data-tl>
+            <div class="tl-year mono">2023</div>
+            <div class="tl-node"></div>
+            <div class="tl-body panel">
+              <div class="tl-top">
+                <div><h3>Nitro Commerce</h3><p class="tl-role">Software Engineer (DevOps)</p></div>
+                <span class="badge mono"><i class="dot"></i>SHIPPED</span>
+              </div>
+              <p class="tl-meta mono">Nov 2023 – May 2025 · Gurugram, India (Hybrid)</p>
+              <ul class="tree mono">
+                <li>Kubernetes</li><li>100K+ RPM infrastructure</li><li>CI/CD</li><li>Grafana + Loki</li><li>GCP / AWS</li>
+              </ul>
+              <details>
+                <summary class="mono">deployment log</summary>
+                <ul class="log-list">
+                  <li>Independently managed production Kubernetes infrastructure serving applications handling 100K+ requests per minute, with load balancing.</li>
+                  <li>Implemented centralised monitoring and log management using Grafana and Loki.</li>
+                  <li>Designed and maintained GitHub Actions CI/CD pipelines, reducing deployment time and enabling zero-touch production releases.</li>
+                  <li>Managed 20+ production Linux servers across GCP and AWS.</li>
+                  <li>Configured and maintained MongoDB, Cassandra and PostgreSQL.</li>
+                  <li>Set up and managed onsite infrastructure and networking for Loyalty Rewardz.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+
+          <article class="tl-item" data-tl>
+            <div class="tl-year mono">2022</div>
+            <div class="tl-node"></div>
+            <div class="tl-body panel">
+              <div class="tl-top">
+                <div><h3>Wigzo by Shiprocket</h3><p class="tl-role">Associate Software Engineer</p></div>
+                <span class="badge mono"><i class="dot"></i>SHIPPED</span>
+              </div>
+              <p class="tl-meta mono">Aug 2022 – Oct 2023 · Delhi, India</p>
+              <ul class="tree mono">
+                <li>Backend Engineering</li><li>Production Releases</li><li>Database Management</li><li>Client Issue Resolution</li>
+              </ul>
+              <details>
+                <summary class="mono">deployment log</summary>
+                <ul class="log-list">
+                  <li>Contributed across the software development lifecycle: coding, testing and bug fixing.</li>
+                  <li>Prepared and deployed software release components.</li>
+                  <li>Maintained and optimised databases and application workflows.</li>
+                  <li>Worked directly with clients to resolve SMS and WhatsApp campaign and job execution issues.</li>
+                  <li>Worked on MVC-based systems and backend services.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+
+          <article class="tl-item tl-edu" data-tl>
+            <div class="tl-year mono">2022</div>
+            <div class="tl-node"></div>
+            <div class="tl-body panel">
+              <div class="tl-top"><div><h3>K.R. Mangalam University</h3><p class="tl-role">B.Tech, Computer Science Engineering</p></div></div>
+              <p class="tl-meta mono">Graduated 2022</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 10 AI × INFRASTRUCTURE ═══════════════ -->
+    <section class="sec" id="ai" aria-labelledby="aiTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="aiTitle" data-type>Infrastructure × AI</h2>
+          <p class="sec-sub">At RaySuite AI, the infrastructure work now runs underneath an agentic system.</p>
+        </header>
+
+        <div class="ai-grid">
+          <div class="panel ai-map">
+            <svg id="aiMap" class="map-svg" role="img" aria-label="An AI agent fans out to campaign automation, analytics and chatbot automation, which run on microservices and cloud infrastructure."></svg>
+          </div>
+          <ul class="ai-list" id="aiList">
+            <li data-branch="agent"><b>Agentic AI system</b><span>“Adi”, built on LangGraph for intelligent workflow automation.</span></li>
+            <li data-branch="campaign"><b>Campaign automation</b><span>Microservices managing Meta and Google ad campaigns, with budgets optimised dynamically from performance.</span></li>
+            <li data-branch="analytics"><b>Predictive analytics</b><span>Algorithms forecasting ROAS and revenue for brands.</span></li>
+            <li data-branch="chatbot"><b>AI-powered chatbots</b><span>Automated social media engagement and quick replies.</span></li>
+            <li data-branch="campaign"><b>Ad generation</b><span>Static and video ad copy generated inside campaigns.</span></li>
+            <li data-branch="infra"><b>Data and services</b><span>MongoDB, Cassandra and PostgreSQL behind the platform.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 11 PROJECTS ═══════════════ -->
+    <section class="sec" id="projects" aria-labelledby="projTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="projTitle" data-type>Selected projects</h2>
+        </header>
+
+        <div class="projects">
+          <article class="proj card" data-tilt>
+            <p class="proj-tag mono"><b>01</b> / KUBERNETES</p>
+            <h3>Production Kubernetes Infrastructure</h3>
+            <p class="proj-desc">Independently ran production clusters behind a load balancer, serving 100K+ requests per minute across GCP and AWS servers.</p>
+            <ol class="flow mono"><li>Internet</li><li>Load Balancer</li><li>Kubernetes</li><li>Microservices</li><li>Databases</li></ol>
+            <ul class="tags mono"><li>Kubernetes</li><li>GCP</li><li>Docker</li><li>NGINX</li><li>Linux</li></ul>
+          </article>
+
+          <article class="proj card" data-tilt>
+            <p class="proj-tag mono"><b>02</b> / CI/CD</p>
+            <h3>CI/CD Automation</h3>
+            <p class="proj-desc">GitHub Actions pipelines that cut deployment time and made production releases zero-touch.</p>
+            <ol class="flow mono"><li>GitHub</li><li>GitHub Actions</li><li>Docker Build</li><li>Testing</li><li>Production</li></ol>
+            <ul class="tags mono"><li>GitHub Actions</li><li>Docker</li><li>CI/CD</li><li>Automation</li></ul>
+          </article>
+
+          <article class="proj card" data-tilt>
+            <p class="proj-tag mono"><b>03</b> / OBSERVABILITY</p>
+            <h3>Observability Platform</h3>
+            <p class="proj-desc">Centralised monitoring and log management with Grafana and Loki, plus log retention on Google Cloud Storage.</p>
+            <ol class="flow mono"><li>Applications</li><li>Logs</li><li>Loki</li><li>Grafana</li><li>GCS</li></ol>
+            <ul class="tags mono"><li>Grafana</li><li>Loki</li><li>GCS</li><li>Monitoring</li><li>Logging</li></ul>
+          </article>
+
+          <article class="proj card" data-tilt>
+            <p class="proj-tag mono"><b>04</b> / SECURITY</p>
+            <h3>SSL / Reverse Proxy Automation</h3>
+            <p class="proj-desc">Reverse proxy and certificate automation using Certbot and Kubernetes cert-manager with Let's Encrypt.</p>
+            <ol class="flow mono"><li>Client</li><li>NGINX</li><li>SSL / Cert-manager</li><li>Kubernetes Service</li></ol>
+            <ul class="tags mono"><li>NGINX</li><li>Cert-manager</li><li>Let's Encrypt</li><li>Kubernetes</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 12 ENGINEERING PRINCIPLES ═══════════════ -->
+    <section class="sec" id="principles" aria-labelledby="prinTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="prinTitle" data-type>Engineering principles</h2>
+        </header>
+
+        <ol class="principles" id="principles">
+          <li data-principle><span class="p-num mono">01</span><div><h3>Automate the repeatable</h3><p>If it has been done by hand twice, it becomes a pipeline.</p></div></li>
+          <li data-principle><span class="p-num mono">02</span><div><h3>Observe before you debug</h3><p>Logs, metrics and dashboards first. Guessing is slower.</p></div></li>
+          <li data-principle><span class="p-num mono">03</span><div><h3>Design for failure</h3><p>Nodes die and pods restart. The system should barely notice.</p></div></li>
+          <li data-principle><span class="p-num mono">04</span><div><h3>Keep deployments boring</h3><p>Zero-touch releases mean nobody holds their breath on release day.</p></div></li>
+          <li data-principle><span class="p-num mono">05</span><div><h3>Scale the system, not the problem</h3><p>Find the bottleneck first. Then add capacity.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 13 TERMINAL TEASER ═══════════════ -->
+    <section class="teaser" aria-label="Hidden terminal">
+      <div class="wrap">
+        <button class="teaser-btn mono" id="teaserTerm" type="button">
+          <span class="ok">$</span> <span id="teaserText">sudo devyanshu --help</span><i class="caret"></i>
+          <em>open terminal</em>
+        </button>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 14 CONTACT ═══════════════ -->
+    <section class="sec" id="contact" aria-labelledby="contactTitle">
+      <div class="wrap contact-grid">
+        <div>
+          <header class="sec-head">
+            <h2 id="contactTitle" data-type>Establish connection</h2>
+            <p class="sec-sub">Open to conversations about infrastructure, platform engineering and AI-driven automation.</p>
+          </header>
+          <ul class="channels mono">
+            <li><em>EMAIL</em><a href="mailto:Devyanshukaushik08@gmail.com">Devyanshukaushik08@gmail.com</a></li>
+            <li><em>GITHUB</em><a href="https://github.com/dev-kurama" target="_blank" rel="noopener">github.com/dev-kurama</a></li>
+            <li id="liLinkedin" hidden><em>LINKEDIN</em><a href="#" target="_blank" rel="noopener"></a></li>
+            <li><em>LOCATION</em><span>Gurugram, India</span></li>
+          </ul>
+        </div>
+
+        <form class="conn panel" id="connForm" novalidate>
+          <div class="conn-head mono">
+            <span>CONNECTION REQUEST</span>
+            <span class="conn-status" id="connStatus" data-state="waiting"><i class="dot"></i><b id="connStatusText">STATUS: WAITING</b></span>
+          </div>
+
+          <div class="conn-fields" id="connFields">
+            <label class="field"><span class="mono">Name</span><input type="text" name="name" autocomplete="name" required minlength="2" maxlength="120"><small class="err" data-err="name"></small></label>
+            <label class="field"><span class="mono">Email</span><input type="email" name="email" autocomplete="email" required maxlength="200"><small class="err" data-err="email"></small></label>
+            <label class="field"><span class="mono">Message</span><textarea name="message" rows="5" required minlength="10" maxlength="4000"></textarea><small class="err" data-err="message"></small></label>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn-primary mono" type="submit" id="connSend">[ SEND REQUEST ]</button>
+          </div>
+
+          <div class="conn-log mono" id="connLog" hidden aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════ 15 FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid mono">
+        <div>
+          <p class="footer-name">DEVYANSHU KAUSHIK</p>
+          <p>Senior DevOps Engineer</p>
+          <p class="muted">Cloud Infrastructure • Kubernetes • CI/CD • Python</p>
+          <p class="muted">Gurugram, India</p>
+        </div>
+        <nav class="footer-links" aria-label="Elsewhere">
+          <a href="https://github.com/dev-kurama" target="_blank" rel="noopener">GitHub</a>
+          <a id="footLinkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
+          <a href="mailto:Devyanshukaushik08@gmail.com">Email</a>
+        </nav>
+      </div>
+      <div class="footer-base mono">
+        <span><i class="dot"></i>SYSTEM STATUS: ONLINE</span>
+        <span class="muted">© 2026 Devyanshu Kaushik</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─────────────── Hidden terminal ─────────────── -->
+  <div class="term-overlay" id="termOverlay" hidden>
+    <div class="term-modal panel" role="dialog" aria-modal="true" aria-label="Terminal">
+      <button class="term-close mono" id="closeTerm" type="button" aria-label="Close terminal">esc ✕</button>
+      <div class="term term-full" data-term="overlay"></div>
+    </div>
+  </div>
+
+</body>
+</html>
