@@ -32,7 +32,7 @@ Behind a proxy/load balancer the server already trusts one proxy hop for the cli
 
 These are illustrative, not live telemetry, and are labelled as such on the page:
 the hero HUD (req/min, CPU, pods), the Kubernetes board (42 pods, CPU/memory), the observability
-graph and log stream, and the terminal's `uptime` (99.99%) and `kubectl` output.
+graph and log stream, and the terminal's `kubectl` output.
 Everything else comes from the resume.
 
 ## Hidden terminal
@@ -44,4 +44,3 @@ Commands: `help about skills infra experience projects contact whoami uptime cle
 ## Deploy
 
 Any Node host works (`npm start`, honours `PORT`). Health check: `GET /healthz`.
-# portfolio

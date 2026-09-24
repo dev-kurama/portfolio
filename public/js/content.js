@@ -44,8 +44,8 @@ export const TECH = [
 
 export const INFRA_DETAILS = {
   cdn: {
-    title: 'CLOUD / CDN',
-    lines: ['Public entry point for traffic', 'DNS and edge routing', 'TLS at the edge', 'GCP and AWS environments'],
+    title: 'CLOUD',
+    lines: ['Public entry point for traffic', 'GCP and AWS environments', 'Traffic routed to the load balancer'],
   },
   lb: {
     title: 'LOAD BALANCER',
@@ -162,7 +162,7 @@ export function commandOutput(cmd) {
     case 'whoami':
       return [ok('devyanshu') + mu('  senior devops engineer · gurugram')];
     case 'uptime':
-      return [ok('99.99%') + ' infrastructure uptime' + mu('  # illustrative')];
+      return [ok('always-on') + ' production mindset'];
     case 'kubectl get nodes':
       return [
         mu('NAME            STATUS   ROLE'),

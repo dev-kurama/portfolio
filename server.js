@@ -145,7 +145,8 @@ app.post('/api/contact', async (req, res) => {
     return res.status(400).json({ ok: false, error: 'Validation failed.', fields: errors });
   }
 
-  const record = { at: new Date().toISOString(), ip: req.ip, name, email, message };
+  // The visitor's IP is used only for in-memory rate limiting, never stored.
+  const record = { at: new Date().toISOString(), name, email, message };
 
   try {
     fs.mkdirSync(DATA_DIR, { recursive: true });

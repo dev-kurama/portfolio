@@ -88,7 +88,7 @@
               <span><em>REQ/MIN</em><b id="hudReq">100,412</b></span>
               <span><em>CPU</em><b id="hudCpu">42%</b></span>
               <span><em>PODS</em><b id="hudPods">9</b></span>
-              <span class="hud-sim">simulated</span>
+              <span class="hud-sim">◌ <span class="only-desktop">PORTFOLIO </span>SIMULATION</span>
             </div>
           </div>
 
@@ -124,8 +124,8 @@
           </article>
           <article class="metric panel" data-metric>
             <div class="metric-num mono" data-count="3" data-suffix="">0</div>
-            <p class="metric-label mono">CLOUD / INFRA ENVIRONMENTS</p>
-            <p class="metric-note">GCP, AWS and onsite.</p>
+            <p class="metric-label mono">INFRASTRUCTURE ENVIRONMENTS</p>
+            <p class="metric-note">GCP · AWS · Onsite</p>
           </article>
         </div>
       </div>
@@ -228,9 +228,11 @@
     <section class="sec" id="cicd" aria-labelledby="cicdTitle">
       <div class="wrap">
         <header class="sec-head">
-          <h2 id="cicdTitle" data-type>Deployment pipeline</h2>
-          <p class="sec-sub">GitHub Actions pipelines that reduced deployment time and made production releases zero-touch.</p>
+          <h2 id="cicdTitle" data-type>Production systems</h2>
+          <p class="sec-sub">How changes ship, and how I know they are healthy. GitHub Actions pipelines that reduced deployment time and made releases zero-touch, plus centralised monitoring and logging.</p>
         </header>
+
+        <h3 class="sub-title">Deployment pipeline</h3>
 
         <div class="pipe panel" id="pipe">
           <div class="pipe-track" id="pipeTrack">
@@ -258,16 +260,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ═══════════════ 07 OBSERVABILITY ═══════════════ -->
-    <section class="sec" id="observability" aria-labelledby="obsTitle">
-      <div class="wrap">
-        <header class="sec-head">
-          <h2 id="obsTitle" data-type>Observability</h2>
-          <p class="sec-sub">Centralised monitoring and logging with Grafana and Loki, with log retention on Google Cloud Storage. Panels below are simulated for illustration.</p>
-        </header>
+        <div class="sub-block" id="observability">
+          <h3 class="sub-title">Observability</h3>
+          <p class="sec-sub obs-sub">Grafana and Loki, with log retention on Google Cloud Storage. Panels below are simulated for illustration.</p>
 
         <div class="obs">
           <div class="panel obs-bars mono" id="obsBars">
@@ -290,6 +286,7 @@
           <ul class="obs-chips mono">
             <li>Grafana</li><li>Loki</li><li>Centralized Logging</li><li>Monitoring</li><li>Log Retention</li><li>GCS Storage</li>
           </ul>
+        </div>
         </div>
       </div>
     </section>
@@ -339,6 +336,7 @@
                 <span class="badge mono live"><i class="dot"></i>CURRENT</span>
               </div>
               <p class="tl-meta mono">Jun 2025 – Present · Delhi, India (Hybrid)</p>
+              <p class="tl-arc mono">focus → AI + infrastructure</p>
               <ul class="tree mono">
                 <li>Agentic AI</li><li>Campaign Automation</li><li>Predictive Analytics</li><li>Microservices</li><li>Distributed Databases</li>
               </ul>
@@ -366,6 +364,7 @@
                 <span class="badge mono"><i class="dot"></i>SHIPPED</span>
               </div>
               <p class="tl-meta mono">Nov 2023 – May 2025 · Gurugram, India (Hybrid)</p>
+              <p class="tl-arc mono">focus → DevOps + cloud infrastructure</p>
               <ul class="tree mono">
                 <li>Kubernetes</li><li>100K+ RPM infrastructure</li><li>CI/CD</li><li>Grafana + Loki</li><li>GCP / AWS</li>
               </ul>
@@ -392,6 +391,7 @@
                 <span class="badge mono"><i class="dot"></i>SHIPPED</span>
               </div>
               <p class="tl-meta mono">Aug 2022 – Oct 2023 · Delhi, India</p>
+              <p class="tl-arc mono">focus → backend engineering</p>
               <ul class="tree mono">
                 <li>Backend Engineering</li><li>Production Releases</li><li>Database Management</li><li>Client Issue Resolution</li>
               </ul>
@@ -567,7 +567,7 @@
         </nav>
       </div>
       <div class="footer-base mono">
-        <span><i class="dot"></i>SYSTEM STATUS: ONLINE</span>
+        <span class="muted">Built with Node.js · no trackers</span>
         <span class="muted">© 2026 Devyanshu Kaushik</span>
       </div>
     </div>

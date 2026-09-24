@@ -43,7 +43,7 @@ export const infraSpec = {
   gapNarrow: 34,
   tiers: [
     [{ id: 'users', kind: 'edge', label: 'USERS' }],
-    [{ id: 'cdn', kind: 'lb', label: 'CLOUD / CDN', detail: 'cdn' }],
+    [{ id: 'cdn', kind: 'lb', label: 'CLOUD', detail: 'cdn' }],
     [{ id: 'lb', kind: 'lb', label: 'LOAD BALANCER', detail: 'lb' }],
     k8sTier(true),
     [{ id: 'svc', kind: 'svc', label: 'MICROSERVICES', detail: 'svc' }],
