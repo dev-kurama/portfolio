@@ -8,7 +8,7 @@
  *  - POST /api/contact  → validates, rate-limits, stores to data/messages.jsonl
  *                          and (optionally) emails via SMTP if configured
  */
-
+require("dotenv").config();
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
